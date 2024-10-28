@@ -1,12 +1,12 @@
 const  http  = require('http');
 const express=require('express');
 const app=new express();
-const {config,anotherConfig}=require('./config');
+const {config,anotherConfig}=require('./src/configs/config');
 const PORT = process.env.PORT || 5000;
 const mysql=require('mssql');
 const cors=require('cors');
-const Login=require('./components/login');
-const home=require('./components/home');
+const Login=require('./src/components/login');
+const home=require('./src/components/home');
 const { json } = require('express/lib/response');
 const { Console } = require('console');
 
