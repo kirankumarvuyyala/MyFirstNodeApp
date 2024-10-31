@@ -10,6 +10,17 @@ const config = {
       charset: 'UTF-8',
     }
   };
+  const PAYMENT_PANEL = {
+    user:process.env.DB_USER, // Ensure this is a valid SQL Server user
+    password: process.env.DB_PASSWORD, // Ensure this password is correct
+    server: '192.168.161.108', // Replace with your server IP or hostname
+    database: 'PAYMENT_PANEL', // Replace with your database name
+    options: {
+      encrypt: false, // Use true if your SQL Server is configured to use encryption
+      trustServerCertificate: true, // Set to true if using self-signed certificates
+      charset: 'UTF-8',
+    }
+  };
   const selfconfig = {
     user:process.env.DB_USER, // Ensure this is a valid SQL Server user
     password: process.env.DB_PASSWORD, // Ensure this password is correct
@@ -127,4 +138,4 @@ function rc4Decrypt(ciphertext, rcpwd) {
   return decrypted;
 }
 
-  module.exports= {config,selfconfig,anotherConfig,rc4Decrypt,RC4Eryption};
+  module.exports= {config,selfconfig,anotherConfig,rc4Decrypt,RC4Eryption,PAYMENT_PANEL};
